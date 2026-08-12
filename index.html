@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Parada — Broaster, Salchipapa &amp; Hamburguesas</title>
+  <meta name="description" content="La Parada: comida callejera hecha al toque. Broaster, salchipapa y hamburguesas recién preparadas. Pide por WhatsApp o visítanos." />
+
+  <!-- ==================== FUENTES (Google Fonts) ====================
+       Bungee: titular tipo letrero de carrito de comida callejera
+       Manrope: texto de lectura, limpio y legible
+       Space Mono: precios y datos, estilo "ticket de orden"
+  ================================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Manrope:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌭</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Enlace de salto para accesibilidad con teclado -->
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ==================== HEADER / NAV ==================== -->
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a href="#inicio" class="logo" aria-label="La Parada, inicio">
+        <span class="logo-mark" aria-hidden="true">🔥</span>
+        <span class="logo-text">La Parada</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul id="nav-list">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#productos" class="nav-link">Productos</a></li>
+          <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contacto" class="btn btn-primary btn-header">Pedir ahora</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ==================== HERO / INICIO ====================
+         Fondo tipo parrilla + insignia de "ticket" flotante:
+         el motivo de ticket de orden es la firma visual del sitio
+         y se repite en Productos.
+    ======================================================== -->
+    <section id="inicio" class="hero">
+      <div class="grill-lines" aria-hidden="true"></div>
+
+      <div class="wrap hero-inner">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Desde el fogón hasta tu mesa</span>
+          <h1 class="hero-title">
+            Comida callejera,<br />
+            hecha al <span class="highlight">toque</span>.
+          </h1>
+          <p class="hero-text">
+            Broaster crocante, salchipapa cargada y hamburguesas jugosas.
+            Preparamos cada pedido al momento, como en la parada de siempre.
+          </p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn btn-primary">Ver el menú</a>
+            <a href="#" id="hero-whatsapp" class="btn btn-outline" target="_blank" rel="noopener">
+              Pedir por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="ticket-badge">
+            <span class="ticket-badge-label">Orden</span>
+            <span class="ticket-badge-number">N.º 001</span>
+            <span class="ticket-badge-status">¡Recién hecho!</span>
+          </div>
+          <div class="food-cluster">
+            <div class="food-emoji food-1">🍗</div>
+            <div class="food-emoji food-2">🍟</div>
+            <div class="food-emoji food-3">🍔</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRODUCTOS ====================
+         Cada producto se muestra como un "ticket de orden":
+         borde perforado arriba, línea punteada y precio en
+         tipografía monoespaciada, como una boleta de cocina.
+    ==================================================== -->
+    <section id="productos" class="productos">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow eyebrow-dark">El menú</span>
+          <h2>Tres clásicos, hechos como se debe</h2>
+          <p>Elige tu antojo y pide directo por WhatsApp con un clic.</p>
+        </div>
+
+        <div class="ticket-grid">
+
+          <!-- Ticket 1: Broaster -->
+          <article class="ticket reveal">
+            <div class="ticket-perf" aria-hidden="true"></div>
+            <div class="ticket-stamp" aria-hidden="true">Favorito</div>
+            <div class="ticket-icon" aria-hidden="true">🍗</div>
+            <h3>Broaster Clásico</h3>
+            <p class="ticket-desc">Presas de pollo marinadas 24 horas, crocantes por fuera y jugosas por dentro. Va con papas y ensalada.</p>
+            <div class="ticket-divider" aria-hidden="true"></div>
+            <div class="ticket-footer">
+              <span class="ticket-price">S/ 18.00</span>
+              <a href="#" class="ticket-order" data-producto="Broaster Clásico" data-precio="S/ 18.00">Pedir</a>
+            </div>
+          </article>
+
+          <!-- Ticket 2: Salchipapa -->
+          <article class="ticket reveal">
+            <div class="ticket-perf" aria-hidden="true"></div>
+            <div class="ticket-stamp ticket-stamp-alt" aria-hidden="true">El más pedido</div>
+            <div class="ticket-icon" aria-hidden="true">🍟</div>
+            <h3>Salchipapa Cargada</h3>
+            <p class="ticket-desc">Papas fritas gruesas, salchicha a la parrilla, huevo frito y las tres cremas de la casa.</p>
+            <div class="ticket-divider" aria-hidden="true"></div>
+            <div class="ticket-footer">
+              <span class="ticket-price">S/ 14.00</span>
+              <a href="#" class="ticket-order" data-producto="Salchipapa Cargada" data-precio="S/ 14.00">Pedir</a>
+            </div>
+          </article>
+
+          <!-- Ticket 3: Hamburguesa -->
+          <article class="ticket reveal">
+            <div class="ticket-perf" aria-hidden="true"></div>
+            <div class="ticket-icon" aria-hidden="true">🍔</div>
+            <h3>Hamburguesa de la Casa</h3>
+            <p class="ticket-desc">Carne 100% de res, queso derretido, tocino crocante y salsa especial en pan artesanal.</p>
+            <div class="ticket-divider" aria-hidden="true"></div>
+            <div class="ticket-footer">
+              <span class="ticket-price">S/ 16.00</span>
+              <a href="#" class="ticket-order" data-producto="Hamburguesa de la Casa" data-precio="S/ 16.00">Pedir</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== UBICACIÓN ==================== -->
+    <section id="ubicacion" class="ubicacion">
+      <div class="wrap ubicacion-inner">
+        <div class="ubicacion-info reveal">
+          <span class="eyebrow">Encuéntranos</span>
+          <h2>Te esperamos en la esquina de siempre</h2>
+
+          <ul class="info-list">
+            <li>
+              <span class="info-icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Dirección</strong>
+                <p>Av. Ejemplo 123, San Isidro, Lima</p>
+              </div>
+            </li>
+            <li>
+              <span class="info-icon" aria-hidden="true">🕒</span>
+              <div>
+                <strong>Horario</strong>
+                <p>Lunes a domingo, 6:00 p.m. – 12:00 a.m.</p>
+              </div>
+            </li>
+            <li>
+              <span class="info-icon" aria-hidden="true">📞</span>
+              <div>
+                <strong>Teléfono / WhatsApp</strong>
+                <p>+51 987 654 321</p>
+              </div>
+            </li>
+          </ul>
+
+          <div id="status-badge" class="status-badge" role="status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="status-text">Consultando horario…</span>
+          </div>
+        </div>
+
+        <div class="ubicacion-map reveal">
+          <!--
+            Reemplaza el "src" del iframe con el enlace de "insertar mapa"
+            de Google Maps para la dirección real del negocio.
+          -->
+          <iframe
+            title="Ubicación de La Parada en el mapa"
+            src="https://www.google.com/maps?q=San+Isidro,Lima,Peru&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACTO ==================== -->
+    <section id="contacto" class="contacto">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow eyebrow-dark">Haz tu pedido</span>
+          <h2>Cuéntanos qué se te antoja</h2>
+          <p>Completa el formulario y te escribimos por WhatsApp para confirmar tu pedido.</p>
+        </div>
+
+        <form id="contact-form" class="contact-form reveal" novalidate>
+
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+            <span class="field-error" id="error-nombre" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="987 654 321" required />
+            <span class="field-error" id="error-telefono" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="producto">¿Qué se te antoja?</label>
+            <select id="producto" name="producto" required>
+              <option value="">Selecciona una opción</option>
+              <option value="Broaster Clásico">Broaster Clásico</option>
+              <option value="Salchipapa Cargada">Salchipapa Cargada</option>
+              <option value="Hamburguesa de la Casa">Hamburguesa de la Casa</option>
+              <option value="Combo variado">Combo variado</option>
+            </select>
+            <span class="field-error" id="error-producto" role="alert"></span>
+          </div>
+
+          <div class="field field-full">
+            <label for="mensaje">Mensaje (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ej. Sin cebolla, para recoger a las 8 pm…"></textarea>
+          </div>
+
+          <div class="field field-full">
+            <button type="submit" class="btn btn-primary btn-block">Enviar pedido por WhatsApp</button>
+            <p id="form-success" class="form-success" role="status"></p>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark" aria-hidden="true">🔥</span>
+        <span class="logo-text">La Parada</span>
+      </div>
+      <p class="footer-tagline">Comida callejera, hecha al toque.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram de La Parada">Instagram</a>
+        <a href="#" aria-label="Facebook de La Parada">Facebook</a>
+        <a href="#" id="footer-whatsapp" aria-label="WhatsApp de La Parada" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> La Parada. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
