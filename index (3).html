@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fuego Street Food | Broaster, Salchipapa & Hamburguesas</title>
+  <meta name="description" content="Comida rápida callejera: broaster crocante, salchipapas cargadas y hamburguesas ahumadas. Pide, recoge, disfruta." />
+
+  <!-- ===== Tipografías: Bungee (display, look de letrero de neón) + Work Sans (texto) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =========================================================
+       PANTALLA DE LOGIN (bloquea el sitio hasta iniciar sesión)
+       Usuario: admin  |  Contraseña: admin
+  ========================================================= -->
+  <section id="login-screen" class="login-screen">
+    <div class="login-card">
+      <p class="login-eyebrow">Acceso al panel</p>
+      <h1 class="neon-sign" data-text="FUEGO">FUEGO</h1>
+      <p class="login-sub">Street Food · Broaster · Salchipapa · Hamburguesas</p>
+
+      <form id="login-form" class="login-form" novalidate>
+        <label class="field">
+          <span>Usuario</span>
+          <input type="text" id="username" name="username" autocomplete="username" placeholder="admin" required />
+        </label>
+
+        <label class="field">
+          <span>Contraseña</span>
+          <input type="password" id="password" name="password" autocomplete="current-password" placeholder="••••••" required />
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+        <p id="login-error" class="login-error" role="alert" aria-live="assertive"></p>
+        <p class="login-hint">Demo: usuario <strong>admin</strong> · contraseña <strong>admin</strong></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SITIO PRINCIPAL (oculto hasta iniciar sesión)
+  ========================================================= -->
+  <div id="main-site" class="main-site" hidden>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#inicio" class="logo">FUEGO<span>.</span></a>
+
+        <nav class="nav" id="nav-menu">
+          <a href="#inicio">Inicio</a>
+          <a href="#productos">Productos</a>
+          <a href="#ubicacion">Ubicación</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="logout-btn" class="btn btn-ghost btn-sm">Cerrar sesión</button>
+          <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== INICIO / HERO ===== -->
+      <section id="inicio" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Directo del fogón a tu mesa</p>
+            <h1 class="hero-title">
+              Crocante. Cargado.<br />
+              <span class="neon-sign" data-text="AL FUEGO.">AL FUEGO.</span>
+            </h1>
+            <p class="hero-text">
+              Broaster dorado, salchipapas hasta el tope y hamburguesas ahumadas a la parrilla.
+              Comida callejera hecha como se debe: rápida, honesta y con sazón de barrio.
+            </p>
+            <div class="hero-actions">
+              <a href="#productos" class="btn btn-primary">Ver el menú</a>
+              <a href="#ubicacion" class="btn btn-outline">Cómo llegar</a>
+            </div>
+
+            <ul class="hero-stats">
+              <li><strong>+8 años</strong><span>en la esquina de siempre</span></li>
+              <li><strong>15 min</strong><span>promedio de espera</span></li>
+              <li><strong>100%</strong><span>aceite renovado a diario</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="ticket-stack">
+              <div class="ticket-badge">ORDEN #042</div>
+              <div class="grill-plate">
+                <span class="emoji">🍗</span>
+                <span class="emoji">🍟</span>
+                <span class="emoji">🍔</span>
+              </div>
+              <div class="ticket-badge ticket-badge--alt">¡LISTO PARA LLEVAR!</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PRODUCTOS ===== -->
+      <section id="productos" class="productos">
+        <div class="container">
+          <p class="eyebrow eyebrow--center">El menú</p>
+          <h2 class="section-title">Pide por su nombre, no por número</h2>
+
+          <div class="menu-grid">
+
+            <!-- Tarjeta de producto (repetir este bloque por cada ítem) -->
+            <article class="menu-card">
+              <div class="menu-card-top">
+                <span class="menu-emoji">🍗</span>
+                <span class="menu-tag">Más pedido</span>
+              </div>
+              <h3>Broaster Clásico</h3>
+              <p>Presas crocantes marinadas 24h, papas rústicas y ensalada fresca.</p>
+              <div class="menu-price-row">
+                <span class="menu-price">S/ 19.90</span>
+                <span class="menu-ticket">#01</span>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card-top">
+                <span class="menu-emoji">🍟</span>
+                <span class="menu-tag">Para compartir</span>
+              </div>
+              <h3>Salchipapa Cargada</h3>
+              <p>Papas fritas, salchicha a la plancha, huevo, queso fundido y salsas de la casa.</p>
+              <div class="menu-price-row">
+                <span class="menu-price">S/ 15.50</span>
+                <span class="menu-ticket">#02</span>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card-top">
+                <span class="menu-emoji">🍔</span>
+                <span class="menu-tag">Ahumada</span>
+              </div>
+              <h3>Hamburguesa de la Casa</h3>
+              <p>Carne 150g a la parrilla, queso cheddar, tocino y cebolla caramelizada.</p>
+              <div class="menu-price-row">
+                <span class="menu-price">S/ 17.90</span>
+                <span class="menu-ticket">#03</span>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card-top">
+                <span class="menu-emoji">🌶️</span>
+                <span class="menu-tag">Picante</span>
+              </div>
+              <h3>Broaster Picante</h3>
+              <p>Nuestra receta clásica bañada en salsa buffalo casera, nivel a elegir.</p>
+              <div class="menu-price-row">
+                <span class="menu-price">S/ 21.90</span>
+                <span class="menu-ticket">#04</span>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card-top">
+                <span class="menu-emoji">🧀</span>
+                <span class="menu-tag">Extra queso</span>
+              </div>
+              <h3>Salchipapa Broaster</h3>
+              <p>La combinación completa: trozos de broaster sobre papas y queso derretido.</p>
+              <div class="menu-price-row">
+                <span class="menu-price">S/ 23.90</span>
+                <span class="menu-ticket">#05</span>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card-top">
+                <span class="menu-emoji">🥤</span>
+                <span class="menu-tag">Combo</span>
+              </div>
+              <h3>Combo Fuego</h3>
+              <p>Cualquier plato principal + bebida de 500ml a elección.</p>
+              <div class="menu-price-row">
+                <span class="menu-price">S/ +5.00</span>
+                <span class="menu-ticket">#06</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== UBICACIÓN ===== -->
+      <section id="ubicacion" class="ubicacion">
+        <div class="container ubicacion-grid">
+          <div class="ubicacion-info">
+            <p class="eyebrow">Encuéntranos</p>
+            <h2 class="section-title">Un carrito, una esquina, un sabor</h2>
+
+            <ul class="info-list">
+              <li>
+                <strong>Dirección</strong>
+                <span>Av. Los Sabores 245, San Isidro, Lima</span>
+              </li>
+              <li>
+                <strong>Horario</strong>
+                <span>Lunes a domingo · 5:00 pm – 12:30 am</span>
+              </li>
+              <li>
+                <strong>Teléfono / WhatsApp</strong>
+                <span>+51 987 654 321</span>
+              </li>
+            </ul>
+
+            <a href="https://www.google.com/maps" target="_blank" rel="noopener" class="btn btn-outline">Abrir en Google Maps</a>
+          </div>
+
+          <div class="ubicacion-map" role="img" aria-label="Mapa referencial de la ubicación del local">
+            <iframe
+              title="Ubicación Fuego Street Food"
+              src="https://www.google.com/maps?q=San%20Isidro%2C%20Lima&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACTO ===== -->
+      <section id="contacto" class="contacto">
+        <div class="container contacto-grid">
+          <div>
+            <p class="eyebrow">Escríbenos</p>
+            <h2 class="section-title">¿Pedido grande o evento? Coordinemos</h2>
+            <p class="hero-text">
+              Cuéntanos qué necesitas y te respondemos el mismo día. También atendemos catering para reuniones y cumpleaños.
+            </p>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <label class="field">
+              <span>Nombre</span>
+              <input type="text" id="contact-name" name="name" placeholder="Tu nombre" required />
+            </label>
+
+            <label class="field">
+              <span>Correo</span>
+              <input type="email" id="contact-email" name="email" placeholder="tucorreo@ejemplo.com" required />
+            </label>
+
+            <label class="field">
+              <span>Mensaje</span>
+              <textarea id="contact-message" name="message" rows="4" placeholder="Cuéntanos tu pedido o consulta" required></textarea>
+            </label>
+
+            <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+            <p id="contact-success" class="contact-success" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <span class="logo">FUEGO<span>.</span></span>
+        <p>© 2026 Fuego Street Food. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
